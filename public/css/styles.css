@@ -1,0 +1,61 @@
+.header {
+  text-align: center;
+}
+
+.form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+  letter-spacing: 1px;
+}
+
+.students {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 12px 24px;
+  margin-bottom: 20px;
+  font-size: large;
+  letter-spacing: 1px;
+}
+
+.list {
+  margin-bottom: 20px;
+}
+
+.list:last-child {
+  margin-bottom: 0;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.form-button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.button {
+  padding: 12px 48px;
+  cursor: pointer;
+}
+
+.button-add {
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.error-paragraph {
+  color: red;
+  font-size: 12px;
+}

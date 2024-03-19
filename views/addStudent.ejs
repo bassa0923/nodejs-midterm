@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Student</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <h1 class="header">Add Student</h1>
+    <form action="/addstudent" method="POST" class="form">
+      <label
+        for="name"
+        class="<%= errors && errors.includes('Name is invalid') ? 'error' : '' %>"
+        >Name:</label
+      >
+      <input type="text" id="name" name="name" value="<%= name %>" required />
+      <% if(errors.includes('Name is invalid')) { %>
+      <p class="error-paragraph">
+        Only english letters are allowed for the name
+      </p>
+      <% } %>
+
+      <label
+        for="surname"
+        class="<%= errors && errors.includes('Surname is invalid') ? 'error' : '' %>"
+        >Surname:</label
+      >
+      <input
+        type="text"
+        id="surname"
+        name="surname"
+        value="<%= surname %>"
+        required
+      />
+      <% if(errors.includes('Surname is invalid')) { %>
+      <p class="error-paragraph">
+        Only english letters are allowed for the surname
+      </p>
+      <% } %>
+
+      <label
+        for="age"
+        class="<%= errors && errors.includes('Age is invalid') ? 'error' : '' %>"
+        >Age:</label
+      >
+      <input type="number" id="age" name="age" value="<%= age %>" required />
+      <% if(errors.includes('Age is invalid')) { %>
+      <p class="error-paragraph">Only numbers from 1 to 100 are allowed</p>
+      <% } %>
+
+      <div class="form-button">
+        <button type="submit" class="button">Add Student</button>
+      </div>
+    </form>
+  </body>
+</html>
