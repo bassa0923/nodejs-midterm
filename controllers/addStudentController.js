@@ -35,7 +35,6 @@ router.post("/", async (req, res) => {
   }
 
   if (errors.length > 0) {
-    // Render the same page with error messages
     return res.render("addstudent", { errors, name, surname, age });
   }
 
