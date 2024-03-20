@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
   }
 
   // Validation for age
-  if (isNaN(parsedAge) || parsedAge <= 0 || parsedAge >= 120) {
+  if (isNaN(parsedAge) || parsedAge <= 0 || parsedAge >= 100) {
     errors.push("Age is invalid");
   }
 
